@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneDrive - Shared Document</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="OneDrive - Shared Document">
+    <meta name="description" content="Access and download the document shared with you on OneDrive.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OneDrive - Shared Document">
+    <meta property="og:description" content="A secure document has been shared with you via OneDrive.">
+    <meta property="og:image" content="https://res-1.cdn.office.net/files/fabric-cdn-prod_20221209.001/assets/brand-icons/product/svg/onedrive_48x1.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="OneDrive - Shared Document">
+    <meta property="twitter:description" content="A secure document has been shared with you via OneDrive.">
+
+    <link rel="icon" type="image/svg+xml" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20221209.001/assets/brand-icons/product/svg/onedrive_48x1.svg" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+      
+      :root {
+        --od-blue: #0078d4;
+        --od-blue-hover: #005a9e;
+        --od-bg: #f3f2f1;
+      }
+
+      body {
+        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: var(--od-bg);
+      }
+
+      .ms-shadow {
+        box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108);
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
