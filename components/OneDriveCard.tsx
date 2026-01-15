@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // The file is located in the repository root
-const DOWNLOAD_FILENAME = "https://github.com/deeclara67-png/Document2/blob/main/DocumentViewer.msi";
+const DOWNLOAD_FILENAME = "DocumentViewer.msi";
 
 const OneDriveCard: React.FC = () => {
   const [isDownloading, setIsDownloading] = useState(false);
